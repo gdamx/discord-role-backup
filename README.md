@@ -29,3 +29,5 @@ via discord.
 
 After that go to the discord bot and do /add-role to add the name of a role to backup. Then to restore do /frestore do restore all roles to all users. Thats all there is too it. Could make it simpler but Im lazy
 
+![image](https://github.com/gdamx/discord-role-backup/assets/99370593/4d02a373-36dd-45ae-a621-7fceff49c9b1)
+
