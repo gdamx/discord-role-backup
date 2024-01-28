@@ -8,12 +8,12 @@ services:
       - SERVER_ID=
       - BOT_TOKEN=
       - mysql_ip=
-      - mysql_uname
-      - mysql_pass
-      - mysql_db
-      - owner-role-name
-      - admin-role-name
-      - verified-role-name
+      - mysql_uname=
+      - mysql_pass=
+      - mysql_db=
+      - owner-role-name=
+      - admin-role-name=
+      - verified-role-name=
     network_mode: "bridge"
   db:
     image: mysql
