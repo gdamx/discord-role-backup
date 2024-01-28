@@ -1,0 +1,35 @@
+version: '3'
+services:
+  app:
+    image: gdamx/discord-role-backup:latest
+    container_name: backup-role-bot
+    restart: unless-stopped
+    environment:
+      - SERVER_ID=
+      - BOT_TOKEN=
+      - mysql_ip=
+      - mysql_uname
+      - mysql_pass
+      - mysql_db
+      - owner-role-name
+      - admin-role-name
+      - verified-role-name
+    network_mode: "bridge"
+  db:
+    image: mysql
+
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - /home/root/docker/mysql/data:/var/lib/mysql
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      - PMA_ARBITRARY=1
